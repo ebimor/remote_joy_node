@@ -1,0 +1,3 @@
+joy_node:
+  deadzone: 0.5 # increase deadzone to prevent noisy/undesired movements
+  autorepeat_rate: 20

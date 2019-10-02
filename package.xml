@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+  <name>remote_joy_node</name>
+  <version>0.1.0</version>
+  <description>remote teleoperation of the robot</description>
+
+  <maintainer email="ebrahim.moradi.s@gmail.com"></maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roslaunch</build_depend>
+
+  <run_depend>joy</run_depend>
+  <run_depend>teleop_twist_joy</run_depend>
+  <run_depend>twist_mux</run_depend>
+
+  <export>
+  </export>
+</package>

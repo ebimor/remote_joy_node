@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="joy_dev" default="/dev/input/js0" />
+  <arg name="joystick" default="true" />
+
+  <group ns="remote_robot_joy_teleop">
+
+    <rosparam command="load" file="$(find remote_joy_node)/config/teleop_robot.yaml" />
+    <param name="joy_node/dev" value="$(arg joy_dev)" />
+
+    <node pkg="joy" type="joy_node" name="joy_node" />
+
+    <node pkg="teleop_twist_joy" type="teleop_node" name="teleop_twist_joy"/>
+
+  </group>
+
+  <group ns="remote_camera_joy_teleop">
+
+    <rosparam command="load" file="$(find remote_joy_node)/config/teleop_camera.yaml" />
+    <param name="joy_node/dev" value="$(arg joy_dev)" />
+
+    <node pkg="joy" type="joy_node" name="joy_node" />
+
+    <!--node pkg="teleop_twist_joy" type="teleop_node" name="teleop_twist_joy"/-->
+  </group>
+
+</launch>
